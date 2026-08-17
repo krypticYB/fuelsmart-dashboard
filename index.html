@@ -55,8 +55,8 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --red:        #c0392b;
-      --red-muted:  #f5e6e5;
+      --red:        #1bb0ce;
+      --red-muted:  #e3f6fa;
       --navy:       #1e2d3d;
       --bg:         #f0f2f5;
       --surface:    #ffffff;
@@ -72,8 +72,8 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       --blue-bg:    #eaf0fb;
     }
     [data-theme="dark"] {
-      --red:        #e05252;
-      --red-muted:  #2a1515;
+      --red:        #3dd3ec;
+      --red-muted:  #0d2b30;
       --navy:       #0d1520;
       --bg:         #0f1923;
       --surface:    #182435;
@@ -409,7 +409,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
         </div>
       </div>
       <div class="hero-right">
-        
+        <a href="https://fuelsmart-support-report.netlify.app" target="_blank" rel="noopener" style="font-size:0.76rem;color:rgba(255,255,255,0.6);text-decoration:none;padding:0.4rem 0.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:6px;">Click here to view monthly support report &#8594;</a>
         <input type="file" id="file-input" accept=".xlsx,.xls" style="display:none;" onchange="handleFileUpload(this)" />
         <button class="upload-btn" id="upload-btn" onclick="document.getElementById('file-input').click()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
@@ -883,8 +883,8 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       if (trendChart) trendChart.destroy();
       var trendCtx = document.getElementById('trendChart').getContext('2d');
       var trendGradient = trendCtx.createLinearGradient(0, 0, 0, 210);
-      trendGradient.addColorStop(0, 'rgba(192,57,43,0.22)');
-      trendGradient.addColorStop(1, 'rgba(192,57,43,0)');
+      trendGradient.addColorStop(0, 'rgba(27,176,206,0.22)');
+      trendGradient.addColorStop(1, 'rgba(27,176,206,0)');
       var dataLen = trendData.length;
       trendChart = new Chart(trendCtx, {
         type: 'line',
@@ -893,13 +893,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
           datasets: [{
             label: 'Revenue',
             data: trendData.map(function(d) { return d.revenue; }),
-            borderColor: '#c0392b',
+            borderColor: '#1bb0ce',
             borderWidth: 2,
             fill: true,
             backgroundColor: trendGradient,
             tension: 0.4,
             pointRadius: trendData.map(function(_, i) { return i === dataLen - 1 ? 5 : 3; }),
-            pointBackgroundColor: '#c0392b',
+            pointBackgroundColor: '#1bb0ce',
             pointBorderColor: 'var(--surface)',
             pointBorderWidth: 2,
             pointHoverRadius: 7,
